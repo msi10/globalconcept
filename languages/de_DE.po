@@ -1,0 +1,401 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Global Concept v1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2013-05-15 07:04:42+0000\n"
+"Last-Translator: wp_admin <samar.malik@t-online.de>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: archive.php:25
+#: taxonomy-archive.php:24
+#: taxonomy-literature.php:27
+#: taxonomy-video-category.php:24
+#: taxonomy.php:25
+#, php-format
+#@ globalconcept
+msgid "Daily Archives: %s"
+msgstr "Artikel nach Tag: %s"
+
+#: archive.php:27
+#: taxonomy-archive.php:26
+#: taxonomy-literature.php:29
+#: taxonomy-video-category.php:26
+#: taxonomy.php:27
+#, php-format
+#@ globalconcept
+msgid "Monthly Archives: %s"
+msgstr "Monatliche Archive: %s"
+
+#: archive.php:27
+#: taxonomy-archive.php:26
+#: taxonomy-literature.php:29
+#: taxonomy-video-category.php:26
+#: taxonomy.php:27
+#@ globalconcept
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: archive.php:29
+#: taxonomy-archive.php:28
+#: taxonomy-literature.php:31
+#: taxonomy-video-category.php:28
+#: taxonomy.php:29
+#, php-format
+#@ globalconcept
+msgid "Yearly Archives: %s"
+msgstr "Archiv nach Jahr: %s"
+
+#: archive.php:29
+#: taxonomy-archive.php:28
+#: taxonomy-literature.php:31
+#: taxonomy-video-category.php:28
+#: taxonomy.php:29
+#@ globalconcept
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: archive.php:31
+#: taxonomy.php:31
+#@ globalconcept
+msgid "Blog Archives"
+msgstr "Blog Archiv"
+
+#: archive.php:57
+#: category.php:51
+#: taxonomy-archive.php:71
+#: taxonomy-literature.php:78
+#: taxonomy-video-category.php:72
+#: taxonomy.php:57
+#@ globalconcept
+msgid "Nothing Found"
+msgstr "Nichts gefunden"
+
+#: archive.php:61
+#: category.php:55
+#: taxonomy-archive.php:75
+#: taxonomy-literature.php:82
+#: taxonomy-video-category.php:76
+#: taxonomy.php:61
+#@ globalconcept
+msgid "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
+msgstr "Keine Einträge gefunden, bitte versuchen Sie es mit der Suche."
+
+#: archive-books.php:46
+#: books.php:42
+#: taxonomy-literature.php:95
+#@ globalconcept
+msgid "Literature:"
+msgstr "Literatur:"
+
+#: archive-events-new.php:57
+#: archive-events.php:55
+#: category.php:67
+#: googleresults.php:15
+#: news.php:47
+#@ globalconcept
+msgid "Categories:"
+msgstr "Kategorien:"
+
+#: content_20130110.php:15
+#: content_20130110.php:19
+#, php-format
+#@ globalconcept
+msgid "Permalink to %s"
+msgstr "Permalink zu %s"
+
+#: content_20130110.php:16
+#@ globalconcept
+msgid "Featured"
+msgstr "Featured"
+
+#: content_20130110.php:30
+#@ globalconcept
+msgid "Reply"
+msgstr "Kommentar"
+
+#: content_20130110.php:30
+#@ globalconcept
+msgctxt "comments number"
+msgid "1"
+msgstr "1"
+
+#: content_20130110.php:30
+#@ globalconcept
+msgctxt "comments number"
+msgid "%"
+msgstr "%"
+
+#: content_20130110.php:41
+#@ globalconcept
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Weiterlesen <span class=\"meta-nav\">&rarr;</span>"
+
+#: content_20130110.php:42
+#@ globalconcept
+msgid "Pages:"
+msgstr "Seiten:"
+
+#. translators: used between list items, there is a space after the comma
+#: content_20130110.php:51
+#: content_20130110.php:61
+#@ globalconcept
+msgid ", "
+msgstr ","
+
+#: content_20130110.php:55
+#, php-format
+#@ globalconcept
+msgid "<span class=\"%1$s\">Posted in</span> %2$s"
+msgstr "<span class=\"%1$s\">Veröffentlicht in</span> %2$s"
+
+#: content_20130110.php:67
+#, php-format
+#@ globalconcept
+msgid "<span class=\"%1$s\">Tagged</span> %2$s"
+msgstr "<span class=\"%1$s\">Tagged</span> %2$s"
+
+#: content_20130110.php:77
+#@ globalconcept
+msgid "Leave a reply"
+msgstr "Kommentar schreiben"
+
+#: content_20130110.php:77
+#@ globalconcept
+msgid "<b>1</b> Reply"
+msgstr "<b>1</b> Kommentar"
+
+#: content_20130110.php:77
+#@ globalconcept
+msgid "<b>%</b> Replies"
+msgstr "<b>%</b> Kommentare"
+
+#: content_20130110.php:80
+#@ globalconcept
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: functions.php:7
+#@ globalconcept
+msgid "Post navigation"
+msgstr "Artikel Navigation"
+
+#: functions.php:8
+#@ globalconcept
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Ältere Einträge"
+
+#: functions.php:9
+#@ globalconcept
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Neuere Einträge <span class=\"meta-nav\">&rarr;</span>"
+
+#: functions.php:16
+#, php-format
+#@ globalconcept
+msgid "<span class=\"sep\">Posted on </span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> <span class=\"sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
+msgstr "<span class=\"sep\">Veröffentlicht am </span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> <span class=\"sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
+
+#: functions.php:22
+#, php-format
+#@ globalconcept
+msgid "View all posts by %s"
+msgstr "Alle Einträge von %s"
+
+#: archive-friday_sermon.php:45
+#: archive-multimedia.php:72
+#: media.php:85
+#: taxonomy-archive.php:89
+#: taxonomy-video-category.php:90
+#@ globalconcept
+msgid "Friday Sermons:"
+msgstr "Freitagsansprachen:"
+
+#: archive-friday_sermon.php:48
+#: archive-multimedia.php:76
+#: media.php:89
+#: taxonomy-archive.php:93
+#: taxonomy-video-category.php:94
+#@ globalconcept
+msgid "Video Categories:"
+msgstr "Video Kategorien"
+
+#: single-books.php:17
+#@ globalconcept
+msgid "Author:"
+msgstr "Autor:"
+
+#: single-books.php:20
+#@ globalconcept
+msgid "Description:"
+msgstr "Beschreibung"
+
+#: single-books.php:24
+#@ globalconcept
+msgid "More by"
+msgstr "Mehr von"
+
+#: single-books.php:85
+#: single-friday_sermon.php:44
+#: single-multimedia.php:28
+#@ globalconcept
+msgid "Not Found!"
+msgstr "Nicht´s gefunden!"
+
+#: single-books.php:86
+#: single-friday_sermon.php:45
+#: single-multimedia.php:29
+#@ globalconcept
+msgid "Sorry, no page matched your criteria."
+msgstr "Keine Einträge gefunden!"
+
+#: taxonomy-archive.php:17
+#@ globalconcept
+msgid "Welcome to Friday Sermons"
+msgstr "Willkommen bei den Freitagsansprachen"
+
+#: taxonomy-archive.php:30
+#: taxonomy-literature.php:33
+#: taxonomy-video-category.php:30
+#@ globalconcept
+msgid "Books Archives"
+msgstr "Bibleothek"
+
+#: taxonomy-video-category.php:17
+#@ globalconcept
+msgid "Welcome to our Media Library"
+msgstr "Willkommen in unserer Mediathek"
+
+#: page.php:7
+#: single.php:7
+#@ globalconcept
+msgid "\"Read More &raquo;\""
+msgstr "\"Weiterlesen &raquo;\""
+
+#: archive-friday_sermon.php:26
+#: archive-multimedia.php:48
+#: media.php:50
+#: single-friday_sermon.php:32
+#: taxonomy-archive.php:53
+#@ globalconcept
+msgid "Sermon delivered by"
+msgstr "Freitagsansprache gehalten von"
+
+#: archive-friday_sermon.php:26
+#: archive-multimedia.php:48
+#: media.php:52
+#: single-friday_sermon.php:32
+#: taxonomy-archive.php:53
+#@ globalconcept
+msgid "on"
+msgstr "am"
+
+#: single-friday_sermon.php:35
+#@ globalconcept
+msgid "Summary:"
+msgstr "Zusammenfassung"
+
+#: archive-friday_sermon.php:8
+#@ globalconcept
+msgid "Welcome to Friday Sermon Archives"
+msgstr "Willkommen bei den Freitagsansprachen"
+
+#: archive-multimedia.php:8
+#@ globalconcept
+msgid "Welcome to our Media Library Overview Page (Multimedia)"
+msgstr "Willkommen in der Mediathek"
+
+#: header.php:27
+#@ globalconcept
+msgid "In the name of Allah, Most Gracious, Most Merciful"
+msgstr "Im Namen Allahs des Gnädigen, des Barmherzigen"
+
+#: index.php:35
+#@ default
+msgid "Our World Head"
+msgstr ""
+
+#: index.php:41
+#@ default
+msgid "The World Peace Leader"
+msgstr ""
+
+#: index.php:43
+#@ default
+msgid "Learn more about "
+msgstr ""
+
+#: index.php:43
+#@ default
+msgid " His Holliness Mirza Masroor Ahmad"
+msgstr ""
+
+#: index.php:43
+#@ default
+msgid "and his activities to establish"
+msgstr ""
+
+#: index.php:43
+#@ default
+msgid "World Peace"
+msgstr ""
+
+#: index.php:43
+#@ default
+msgid "by emphasizing Unity and Brotherhood all over the world."
+msgstr ""
+
+#: index.php:51
+#@ globalconcept
+msgid "Latest Friday Sermon delivered by our World Head"
+msgstr "Neueste Freitagsansprache"
+
+#: index.php:94
+#@ globalconcept
+msgid "News and Blog"
+msgstr "Nachrichten und Blog"
+
+#: index.php:125
+#@ globalconcept
+msgid "Upcoming and past Events"
+msgstr "Veranstaltungen"
+
+#: index.php:165
+#@ globalconcept
+msgid "Latest Publications"
+msgstr "Neues aus der Bilbleothek"
+
+#: index.php:221
+#@ globalconcept
+msgid "Watch latest videos from our Media Library"
+msgstr "Neues aus der Mediathek"
+
+#: media.php:8
+#@ globalconcept
+msgid "Welcome to our Media Library Overview Page (Media)"
+msgstr "Willkommen in der Mediathek"
+
+#: single-multimedia.php:19
+#@ globalconcept
+msgid "Video Description:"
+msgstr "Videobeschreibung:"
+
+#: taxonomy-event-category.php:41
+#@ globalconcept
+msgid "Events:"
+msgstr "Veranstaltungen:"
+

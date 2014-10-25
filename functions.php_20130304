@@ -1,0 +1,285 @@
+<?php
+function globalconcept_content_nav( $nav_id ) {
+        global $wp_query;
+
+        if ( $wp_query->max_num_pages > 1 ) : ?>
+                <nav id="<?php echo $nav_id; ?>">
+                        <h3 class="assistive-text"><?php _e( 'Post navigation', 'globalconcept' ); ?></h3>
+                        <div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'globalconcept' ) ); ?></div>
+                        <div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'globalconcept' ) ); ?></div>
+                </nav><!-- #nav-above -->
+        <?php endif;
+}
+
+
+function globalconcept_posted_on() {
+        printf( __( '<span class="sep">Posted on </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'globalconcept' ),
+                esc_url( get_permalink() ),
+                esc_attr( get_the_time() ),
+                esc_attr( get_the_date( 'c' ) ),
+                esc_html( get_the_date() ),
+                esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+                sprintf( esc_attr__( 'View all posts by %s', 'globalconcept' ), get_the_author() ),
+                esc_html( get_the_author() )
+        );
+}
+
+function dimox_breadcrumbs() {
+ 
+  $delimiter = '<span>&raquo;</span>';
+  $home = 'Home'; // text for the 'Home' link
+  $before = '<span>'; // tag before the current crumb
+  $after = '</span>'; // tag after the current crumb
+ 
+  if ( !is_home() && !is_front_page() || is_paged() ) {
+ 
+    echo '<nav id="breadcrumbs">';
+ 
+    global $post;
+    $homeLink = get_bloginfo('url');
+    echo '<a href="' . $homeLink . '">' . $home . '</a> ' . $delimiter . ' ';
+ 
+    if ( is_category() ) {
+      global $wp_query;
+      $cat_obj = $wp_query->get_queried_object();
+      $thisCat = $cat_obj->term_id;
+      $thisCat = get_category($thisCat);
+      $parentCat = get_category($thisCat->parent);
+      if ($thisCat->parent != 0) echo(get_category_parents($parentCat, TRUE, ' ' . $delimiter . ' '));
+      echo $before . 'Archive by category "' . single_cat_title('', false) . '"' . $after;
+ 
+    } elseif ( is_day() ) {
+      echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a> ' . $delimiter . ' ';
+      echo '<a href="' . get_month_link(get_the_time('Y'),get_the_time('m')) . '">' . get_the_time('F') . '</a> ' . $delimiter . ' ';
+      echo $before . get_the_time('d') . $after;
+ 
+    } elseif ( is_month() ) {
+      echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a> ' . $delimiter . ' ';
+      echo $before . get_the_time('F') . $after;
+ 
+    } elseif ( is_year() ) {
+      echo $before . get_the_time('Y') . $after;
+ 
+    } elseif ( is_single() && !is_attachment() ) {
+      if ( get_post_type() != 'post' ) {
+        $post_type = get_post_type_object(get_post_type());
+        $slug = $post_type->rewrite;
+        echo '<a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . '</a> ' . $delimiter . ' ';
+        echo $before . get_the_title() . $after;
+      } else {
+        $cat = get_the_category(); $cat = $cat[0];
+        echo get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
+        echo $before . get_the_title() . $after;
+      }
+ 
+    } elseif ( !is_single() && !is_page() && get_post_type() != 'post' && !is_404() ) {
+      $post_type = get_post_type_object(get_post_type());
+      echo $before . $post_type->labels->singular_name . $after;
+ 
+    } elseif ( is_attachment() ) {
+      $parent = get_post($post->post_parent);
+      $cat = get_the_category($parent->ID); $cat = $cat[0];
+      echo get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
+      echo '<a href="' . get_permalink($parent) . '">' . $parent->post_title . '</a> ' . $delimiter . ' ';
+      echo $before . get_the_title() . $after;
+ 
+    } elseif ( is_page() && !$post->post_parent ) {
+      echo $before . get_the_title() . $after;
+ 
+    } elseif ( is_page() && $post->post_parent ) {
+      $parent_id  = $post->post_parent;
+      $breadcrumbs = array();
+      while ($parent_id) {
+        $page = get_page($parent_id);
+        $breadcrumbs[] = '<a href="' . get_permalink($page->ID) . '">' . get_the_title($page->ID) . '</a>';
+        $parent_id  = $page->post_parent;
+      }
+      $breadcrumbs = array_reverse($breadcrumbs);
+      foreach ($breadcrumbs as $crumb) echo $crumb . ' ' . $delimiter . ' ';
+      echo $before . get_the_title() . $after;
+ 
+    } elseif ( is_search() ) {
+      echo $before . 'Search results for "' . get_search_query() . '"' . $after;
+ 
+    } elseif ( is_tag() ) {
+      echo $before . 'Posts tagged "' . single_tag_title('', false) . '"' . $after;
+ 
+    } elseif ( is_author() ) {
+       global $author;
+      $userdata = get_userdata($author);
+      echo $before . 'Articles posted by ' . $userdata->display_name . $after;
+ 
+    } elseif ( is_404() ) {
+      echo $before . 'Error 404' . $after;
+    }
+ 
+    if ( get_query_var('paged') ) {
+      if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ' (';
+      echo __('Page', 'globalconcept') . ' ' . get_query_var('paged');
+      if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
+    }
+ 
+    echo '</nav>';
+ 
+  }
+} // end dimox_breadcrumbs()
+/**
+ * Adds support for a custom header image.
+ */
+require( get_template_directory() . '/inc/custom-header.php' );
+
+
+/* Change "POST" label to "NEWS" - Starts */
+function change_post_menu_label() {
+	global $menu;
+	global $submenu;
+	$menu[5][0] = 'News';
+	$submenu['edit.php'][5][0] = 'News';
+	$submenu['edit.php'][10][0] = 'Add News';
+	$submenu['edit.php'][16][0] = 'News Tags';
+	echo '';
+}
+function change_post_object_label() {
+	global $wp_post_types;
+	$labels = &$wp_post_types['post']->labels;
+	$labels->name = 'News';
+	$labels->singular_name = 'News';
+	$labels->add_new = 'Add News';
+	$labels->add_new_item = 'Add News';
+	$labels->edit_item = 'Edit News';
+	$labels->new_item = 'News';
+	$labels->view_item = 'View News';
+	$labels->search_items = 'Search News';
+	$labels->not_found = 'No News found';
+	$labels->not_found_in_trash = 'No News found in Trash';
+	$labels->all_items = "News";
+	$labels->menu_name = "News";
+	$labels->name_admin_bar = "News";
+}
+add_action( 'init', 'change_post_object_label' );
+add_action( 'admin_menu', 'change_post_menu_label' );
+
+/* Change "POST" label to "NEWS" - Ends */
+
+/* Show Category Filters - Starts */
+
+add_action( 'restrict_manage_posts', 'my_filter_list' );
+
+function my_filter_list() {
+    $screen = get_current_screen();
+    global $wp_query;
+    if ( $screen->post_type == 'books' ) {
+        wp_dropdown_categories( array(
+            'show_option_all' => 'Show All Books',
+            'taxonomy' => 'literature',
+            'name' => 'literature',
+            'orderby' => 'name',
+            'selected' => ( isset( $wp_query->query['writer'] ) ? $wp_query->query['writer'] : '' ),
+            'hierarchical' => false,
+            'depth' => 3,
+            'show_count' => false,
+            'hide_empty' => true,
+        ) );
+    }
+}
+
+add_filter( 'parse_query','perform_filtering' );
+
+function perform_filtering( $query ) {
+    $qv = &$query->query_vars;
+    if ( ( $qv['writer'] ) && is_numeric( $qv['writer'] ) ) {
+        $term = get_term_by( 'id', $qv['writer'], 'writer' );
+        $qv['writer'] = $term->slug;
+    }
+}
+
+/* Show Category Filters - Ends */
+/* Make theme available for translation */
+load_theme_textdomain( 'globalconcept', TEMPLATEPATH . '/languages' );
+
+add_theme_support( 'post-thumbnails' ); 
+add_image_size( 'books-thumbs', 112, 152, true );
+add_image_size( 'books-thumbs-home', 92, 124, true );
+add_image_size( 'books-single-thumb', 197, 259, true );
+
+//add_theme_support( 'books-thumbs' );
+//set_post_thumbnail_size( 112, 152, true );
+
+
+
+register_nav_menu('main', 'Main Menu');
+
+if ( function_exists('register_sidebar') )
+register_sidebar(array(
+	'name' => 'Sidebar Menu',
+	'before_widget' => '<div class="sidebox sidemenu">',
+	'after_widget' => '</div>',
+	'before_title' => '<h4>',
+	'after_title' => '</h4>',
+));
+
+if ( function_exists('register_sidebar') )
+register_sidebar(array(
+	'name' => 'Sidebar Social',
+	'before_widget' => '<div class="sidebox social-icons">',
+	'after_widget' => '</div>',
+	'before_title' => '<h4>',
+	'after_title' => '</h4>',
+));
+
+if ( function_exists('register_sidebar') )
+register_sidebar(array(
+	'name' => 'Footer',
+	'before_widget' => '<article>',
+	'after_widget' => '</article>',
+	'before_title' => '<h4 class="footerH">',
+	'after_title' => '</h4>',
+));
+
+if(is_home()) {
+	if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Page Sidebar') ) :
+	endif;
+} //end index page only stuff
+if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Regular Sidebar') ) :
+endif;
+
+//list terms in a given taxonomy using wp_list_categories (also useful as a widget if using a PHP Code plugin)
+$args_lit = array(
+		'taxonomy'     => 'literature',
+		'orderby'      => 'name',
+		'show_count'   => 0,
+		'pad_counts'   => 0,
+		'hierarchical' => 1,
+		'title_li'     => '',
+		'order'        => 'ASC',
+);
+
+$args_arc = array(
+		'taxonomy'     => 'archive',
+		'orderby'      => 'name',
+		'show_count'   => 0,
+		'pad_counts'   => 0,
+		'hierarchical' => 1,
+		'title_li'     => '',
+		'order'        => 'ASC',
+);
+
+$args_video = array(
+		'taxonomy'     => 'video-category',
+		'orderby'      => 'name',
+		'show_count'   => 0,
+		'pad_counts'   => 0,
+		'hierarchical' => 1,
+		'title_li'     => '',
+		'order'        => 'ASC',
+);
+$args_evevnts = array(
+		'taxonomy'     => 'event-category',
+		'orderby'      => 'name',
+		'show_count'   => 0,
+		'pad_counts'   => 0,
+		'hierarchical' => 1,
+		'title_li'     => '',
+		'order'        => 'ASC',
+);
+?>

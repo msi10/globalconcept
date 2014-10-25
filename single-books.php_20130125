@@ -1,0 +1,102 @@
+<?php get_header(); ?>
+
+<section id="two-third" class="book-detail">
+    
+    <?php if (have_posts()) : ?>
+		<?php while (have_posts()) : the_post(); ?>
+		
+	<article>
+		<h1><?php the_title(); ?></h1>
+		<div class="book-detail-author">
+			<h3>Author:&nbsp;<?php echo get_post_meta($post->ID, 'wpcf-author', true); ?></h3>
+		</div>
+
+		<h3>Description:</h3>
+		<p><?php echo get_post_meta($post->ID, 'wpcf-write-a-short-description', true); ?></p>
+		
+		<div class="book-detail-container">
+			<?php echo do_shortcode(get_post_meta($post->ID, 'wpcf-paste-file-link-here', true)); ?>
+		</div>
+		<div class="book-download"><h3>Download PDF File:&nbsp;<?php the_title(); ?> (?MB)</h3></div>
+		<h2>More by <?php echo get_post_meta($post->ID, 'wpcf-author', true); ?>:</h2>
+		
+		<?php 
+		// getting more for this category
+		$cat_ID=array();
+		$categories = get_the_category();
+		foreach($categories as $category) {
+			array_push($cat_ID,$category->cat_ID);
+		}
+		$args = array(
+				'orderby' => 'date',
+				'order' => 'DESC',
+				'post_type' => 'books',
+				'numberposts' => 2,
+				'post__not_in' => array($post->ID),	// we do not need to display current post
+				'category__in' => $cat_ID
+		);
+		$cat_posts = get_posts($args);
+		?>
+		
+		<div class="books-content">
+		<?php 
+		foreach($cat_posts as $cat_post) {
+		$even_odd = (++$j % 2 == 0) ? 'even' : 'odd';
+		?>
+		
+			<div id="book-1" class="book-container <?php echo $even_odd; ?>">
+				<div class="book-image">
+					<a href="<?php the_permalink(); ?>"><?php echo get_the_post_thumbnail( $cat_post->ID, 'books-thumbs'); ?></a>
+				</div>
+				<div class="book-info">
+					<div class="book-title">
+						<a href="<?php echo get_permalink($cat_post->ID); ?>" class="title"><?php echo wptexturize($cat_post->post_title); ?></a>
+					</div>
+					<div class="book-author"><?php echo get_post_meta($cat_post->ID, 'wpcf-author', true); ?></div>
+				</div>
+			</div>
+
+		<?php } ?>
+		</div>
+		
+	</article>
+</section>
+
+<aside id="one-third" class="one-third-book-info">
+
+	<div class="book-detail-info">
+		<div class="book-info-image">
+			<?php echo get_the_post_thumbnail( $post->ID, 'books-single-thumb'); ?>
+		</div>
+		
+		<div class="book-info-more">
+			<h3>More about the Author:</h3>
+			<div class="book-link">
+				<a href="#" class="title">Watch Video Documentary about Hadhrat Mirza Masroor Ahmad</a>
+			</div>
+			<div class="book-link">
+				<a href="#" class="title">Watch regular Friday Sermons delivered by Hadhrat Mirza Masroor Ahmad</a>
+			</div>
+			<div class="book-link">
+				<a href="#" class="title">Watch Videos of VIP Recetions with Hadhrat Mirza Masroor Ahmad</a>
+			</div>
+			<div class="book-link">
+				<a href="#" class="title">Read his letters to various other World Leaders</a>
+			</div>
+			<div class="book-link">
+				<a href="#" class="title">Find More literature in our Library by Hadhrat Mirza Masroor Ahmad</a>
+			</div>
+		</div>
+	</div>
+
+</aside>
+
+		<?php endwhile; ?>
+	<?php else: ?>
+    	<article>
+			<h1>Not Found!</h1>
+			<p>Sorry, no page matched your criteria.</p>
+		</article>
+    <?php endif; ?>
+	</section>
+<?php get_footer(); ?>

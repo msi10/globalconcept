@@ -1,0 +1,595 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Global Concept v1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-10-24 18:01:21+0000\n"
+"Last-Translator: wp_admin <samar.malik@t-online.de>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: Kyrgyz\n"
+"X-Poedit-Country: KYRGYZSTAN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: archive-books.php:46
+#: books.php:42
+#: taxonomy-literature.php:95
+#@ globalconcept
+msgid "Literature:"
+msgstr "Адабияттар:"
+
+#: archive-events-new.php:57
+#: archive-events.php:55
+#: category.php:67
+#: googleresults.php:15
+#: news.php:47
+#@ globalconcept
+msgid "Categories:"
+msgstr "Категориялар:"
+
+#: archive-multimedia.php:48
+#: media.php:50
+#: single-friday_sermon.php:32
+#@ globalconcept
+msgid "Sermon delivered by"
+msgstr "Кутбаны окуган адам:"
+
+#: archive-multimedia.php:48
+#: media.php:52
+#: single-friday_sermon.php:32
+#@ globalconcept
+msgid "on"
+msgstr "-"
+
+#: archive-multimedia.php:72
+#: media.php:85
+#: taxonomy-video-category.php:90
+#@ globalconcept
+msgid "Friday Sermons:"
+msgstr "Жума Кутбалары:"
+
+#: archive-multimedia.php:76
+#: media.php:89
+#: taxonomy-video-category.php:94
+#@ globalconcept
+msgid "Video Categories:"
+msgstr "Видео Категориялары:"
+
+#: archive-multimedia.php:8
+#@ globalconcept
+msgid "Welcome to our Media Library Overview Page (Multimedia)"
+msgstr "Биздин Медиа Китепканабызга кош келиӊиздер"
+
+#: archive.php:25
+#: taxonomy-literature.php:27
+#: taxonomy-video-category.php:24
+#: taxonomy.php:25
+#, php-format
+#@ globalconcept
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: archive.php:27
+#: taxonomy-literature.php:29
+#: taxonomy-video-category.php:26
+#: taxonomy.php:27
+#, php-format
+#@ globalconcept
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: archive.php:27
+#: taxonomy-literature.php:29
+#: taxonomy-video-category.php:26
+#: taxonomy.php:27
+#@ globalconcept
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: archive.php:29
+#: taxonomy-literature.php:31
+#: taxonomy-video-category.php:28
+#: taxonomy.php:29
+#, php-format
+#@ globalconcept
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: archive.php:29
+#: taxonomy-literature.php:31
+#: taxonomy-video-category.php:28
+#: taxonomy.php:29
+#@ globalconcept
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: archive.php:31
+#: taxonomy.php:31
+#@ globalconcept
+msgid "Blog Archives"
+msgstr ""
+
+#: archive.php:57
+#: category.php:51
+#: taxonomy-archive.php:80
+#: taxonomy-literature.php:78
+#: taxonomy-video-category.php:72
+#: taxonomy.php:57
+#@ globalconcept
+msgid "Nothing Found"
+msgstr ""
+
+#: archive.php:61
+#: category.php:55
+#: taxonomy-archive.php:84
+#: taxonomy-literature.php:82
+#: taxonomy-video-category.php:76
+#: taxonomy.php:61
+#@ globalconcept
+msgid "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
+msgstr "Кечирим сурайбыз, бирок изилденген архив боюнча эч нерсе табылган жок.  Балким архивке байланыштуу  суроолорду изилдөө жолу менен тапсаӊыз болот"
+
+#: content_20130110.php:15
+#: content_20130110.php:19
+#, php-format
+#@ globalconcept
+msgid "Permalink to %s"
+msgstr ""
+
+#: content_20130110.php:16
+#@ globalconcept
+msgid "Featured"
+msgstr ""
+
+#: content_20130110.php:30
+#@ globalconcept
+msgid "Reply"
+msgstr ""
+
+#: content_20130110.php:30
+#@ globalconcept
+msgctxt "comments number"
+msgid "1"
+msgstr ""
+
+#: content_20130110.php:30
+#@ globalconcept
+msgctxt "comments number"
+msgid "%"
+msgstr ""
+
+#: content-friday-sermon.php:95
+#: content_20130110.php:41
+#@ twentyfourteen
+#@ globalconcept
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: content-friday-sermon.php:99
+#: content_20130110.php:42
+#@ twentyfourteen
+#@ globalconcept
+msgid "Pages:"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: content_20130110.php:51
+#: content_20130110.php:61
+#@ globalconcept
+msgid ", "
+msgstr ""
+
+#: content_20130110.php:55
+#, php-format
+#@ globalconcept
+msgid "<span class=\"%1$s\">Posted in</span> %2$s"
+msgstr ""
+
+#: content_20130110.php:67
+#, php-format
+#@ globalconcept
+msgid "<span class=\"%1$s\">Tagged</span> %2$s"
+msgstr ""
+
+#: content_20130110.php:77
+#@ globalconcept
+msgid "Leave a reply"
+msgstr ""
+
+#: content_20130110.php:77
+#@ globalconcept
+msgid "<b>1</b> Reply"
+msgstr ""
+
+#: content_20130110.php:77
+#@ globalconcept
+msgid "<b>%</b> Replies"
+msgstr ""
+
+#: content-friday-sermon.php:55
+#: content_20130110.php:80
+#@ twentyfourteen
+#@ globalconcept
+msgid "Edit"
+msgstr ""
+
+#: functions.php:7
+#@ globalconcept
+msgid "Post navigation"
+msgstr ""
+
+#: functions.php:8
+#@ globalconcept
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: functions.php:9
+#@ globalconcept
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: functions.php:16
+#, php-format
+#@ globalconcept
+msgid "<span class=\"sep\">Posted on </span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> <span class=\"sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
+msgstr ""
+
+#: functions.php:22
+#, php-format
+#@ globalconcept
+msgid "View all posts by %s"
+msgstr ""
+
+#: header.php:28
+#@ globalconcept
+msgid "In the name of Allah, Most Gracious, Most Merciful"
+msgstr "Эӊ Мээримдүү (жана) Эӊ Ырайымдуу Алланын аты менен"
+
+#: index.php:12
+#@ default
+msgid "Our World Head"
+msgstr ""
+
+#: index.php:18
+#@ default
+msgid "The World Peace Leader"
+msgstr ""
+
+#: index.php:20
+#@ default
+msgid "Learn more about "
+msgstr ""
+
+#: index.php:20
+#@ default
+msgid " His Holliness Mirza Masroor Ahmad"
+msgstr ""
+
+#: index.php:20
+#@ default
+msgid "and his activities to establish"
+msgstr ""
+
+#: index.php:20
+#@ default
+msgid "World Peace"
+msgstr ""
+
+#: index.php:20
+#@ default
+msgid "by emphasizing Unity and Brotherhood all over the world."
+msgstr ""
+
+#: index.php:28
+#@ globalconcept
+msgid "Latest Friday Sermon delivered by our World Head"
+msgstr "Соӊку жума кутбасы"
+
+#: index.php:71
+#@ globalconcept
+msgid "News and Blog"
+msgstr "Жаӊылыктар жана Блог"
+
+#: index.php:102
+#@ globalconcept
+msgid "Upcoming and past Events"
+msgstr "Боло турган жана болуп жаткан окуялар"
+
+#: index.php:142
+#@ globalconcept
+msgid "Latest Publications"
+msgstr "Соӊку адабияттар "
+
+#: index.php:198
+#@ globalconcept
+msgid "Watch latest videos from our Media Library"
+msgstr "Биздин медиа китепканабыздан соӊку видеотасмаларды көргүлө"
+
+#: media.php:8
+#@ globalconcept
+msgid "Welcome to our Media Library Overview Page (Media)"
+msgstr "Медиа китепканабыздагы башкы бетке кош келиӊиздер (медиа)"
+
+#: page.php:7
+#: single-friday_sermon.php:40
+#: single.php:7
+#@ globalconcept
+msgid "\"Read More &raquo;\""
+msgstr ""
+
+#: single-books.php:17
+#@ globalconcept
+msgid "Author:"
+msgstr "Автор:"
+
+#: single-books.php:20
+#@ globalconcept
+msgid "Description:"
+msgstr "Түшүндүрмө"
+
+#: single-books.php:90
+#: single-friday_sermon.php:47
+#: single-multimedia.php:31
+#@ globalconcept
+msgid "Not Found!"
+msgstr "Эн нерсе табылган жок"
+
+#: single-books.php:91
+#: single-friday_sermon.php:48
+#: single-multimedia.php:32
+#@ globalconcept
+msgid "Sorry, no page matched your criteria."
+msgstr ""
+
+#: single-friday_sermon.php:35
+#@ globalconcept
+msgid "Summary:"
+msgstr ""
+
+#: single-multimedia.php:19
+#@ globalconcept
+msgid "Video Description:"
+msgstr "Видеотасма  жөнүндө маалымат:"
+
+#: taxonomy-literature.php:33
+#: taxonomy-video-category.php:30
+#@ globalconcept
+msgid "Books Archives"
+msgstr "Китептердин архиви:"
+
+#: taxonomy-event-category.php:41
+#@ globalconcept
+msgid "Events:"
+msgstr "Окуялар:"
+
+#: taxonomy-video-category.php:17
+#@ globalconcept
+msgid "Welcome to our Media Library"
+msgstr ""
+
+#: archive-friday_sermon.php:11
+#: taxonomy-archive.php:19
+#@ globalconcept
+msgid "The Friday Sermon Archive"
+msgstr "Жума кутбалары"
+
+#: archive-friday_sermon.php:12
+#: taxonomy-archive.php:20
+#@ globalconcept
+msgid "The Jumu'ah (Friday) prayer is one form of congregational worship in Islam. It takes place every Friday. Regular attendance at the Jumu'ah prayer is enjoined on the believer. According to a Saying of Muhammadsa this congregational prayer is twenty-five times more blessed than worship performed alone. (Bukhari)"
+msgstr "Ислам дининде «Жума» намазы жамаат намаздарынын бири. Ал ар жума күнү аткарылат. Жума намазына үзгүлтүксүз катышуу момун-мусулмандарга парыз. Сүйүктүү Пайгамбарыбыз Мухаммад(сав)дын хадиси боюнча ушул жамаат намазы (адамды) жалгыз намаз аткаруудан көрө жыйырма беш эсе көбүрөөк соопко татыктуу кылат. (Бухарий)"
+
+#: archive-friday_sermon.php:20
+#: taxonomy-archive.php:29
+#@ globalconcept
+msgid "Select Sermon Archive by Year"
+msgstr "Кутба жылын тандагыла:"
+
+#: archive-friday_sermon.php:50
+#: taxonomy-archive.php:58
+#@ globalconcept
+msgid "Friday Sermon"
+msgstr "Жума Кутбасы"
+
+#: content-friday-sermon.php:32
+#@ twentyfourteen
+msgctxt "Used between list items, there is a space after the comma."
+msgid ", "
+msgstr ""
+
+#: content-friday-sermon.php:51
+#@ twentyfourteen
+msgid "Leave a comment"
+msgstr ""
+
+#: content-friday-sermon.php:51
+#@ twentyfourteen
+msgid "1 Comment"
+msgstr ""
+
+#: content-friday-sermon.php:51
+#@ twentyfourteen
+msgid "% Comments"
+msgstr ""
+
+#: prayer-plan.php:1251
+#@ globalconcept
+msgid "Salat Timings"
+msgstr ""
+
+#: prayer-plan.php:1257
+#@ globalconcept
+msgid "Information about how to use the Salat Time Calculator:"
+msgstr ""
+
+#: prayer-plan.php:1259
+#@ globalconcept
+msgid "Please type the location in the form below."
+msgstr ""
+
+#: prayer-plan.php:1260
+#@ globalconcept
+msgid "You may compare your typed location with the location displayed on the map."
+msgstr ""
+
+#: prayer-plan.php:1261
+#@ globalconcept
+msgid "The line on the map indicates the direction to the Kaaba (Mecca)."
+msgstr ""
+
+#: prayer-plan.php:1262
+#@ globalconcept
+msgid "Please note that there may be minor variations in the calculated timings."
+msgstr ""
+
+#: prayer-plan.php:1268
+#@ globalconcept
+msgid "Your Location:"
+msgstr ""
+
+#: prayer-plan.php:1281
+#@ globalconcept
+msgid "In the Name of Allah, The Gracious, The Merciful"
+msgstr ""
+
+#: prayer-plan.php:1287
+#@ globalconcept
+msgid "Ahmadiyya Muslim Jamaat"
+msgstr ""
+
+#: prayer-plan.php:1296
+#@ globalconcept
+msgid "Salat Timings for:"
+msgstr ""
+
+#: prayer-plan.php:1319
+#@ globalconcept
+msgid "These Salat Timings were created on "
+msgstr ""
+
+#: prayer-plan.php:1319
+#@ globalconcept
+msgid "<br />These information are supplied without liability."
+msgstr ""
+
+#: prayer-plan.php:1327
+#@ globalconcept
+msgid "Print Salat Timings"
+msgstr ""
+
+#: prayer-plan.php:1342
+#@ globalconcept
+msgid "Sun"
+msgstr ""
+
+#: prayer-plan.php:1343
+#@ globalconcept
+msgid "Mon"
+msgstr ""
+
+#: prayer-plan.php:1344
+#@ globalconcept
+msgid "Tue"
+msgstr ""
+
+#: prayer-plan.php:1345
+#@ globalconcept
+msgid "Wed"
+msgstr ""
+
+#: prayer-plan.php:1346
+#@ globalconcept
+msgid "Thu"
+msgstr ""
+
+#: prayer-plan.php:1347
+#@ globalconcept
+msgid "Fri"
+msgstr ""
+
+#: prayer-plan.php:1348
+#@ globalconcept
+msgid "Sat"
+msgstr ""
+
+#: prayer-plan.php:2348
+#@ globalconcept
+msgid "January"
+msgstr ""
+
+#: prayer-plan.php:2348
+#@ globalconcept
+msgid "February"
+msgstr ""
+
+#: prayer-plan.php:2348
+#@ globalconcept
+msgid "March"
+msgstr ""
+
+#: prayer-plan.php:2348
+#@ globalconcept
+msgid "April"
+msgstr ""
+
+#: prayer-plan.php:2348
+#@ globalconcept
+msgid "May"
+msgstr ""
+
+#: prayer-plan.php:2348
+#@ globalconcept
+msgid "June"
+msgstr ""
+
+#: prayer-plan.php:2348
+#@ globalconcept
+msgid "July"
+msgstr ""
+
+#: prayer-plan.php:2348
+#@ globalconcept
+msgid "August"
+msgstr ""
+
+#: prayer-plan.php:2348
+#@ globalconcept
+msgid "September"
+msgstr ""
+
+#: prayer-plan.php:2348
+#@ globalconcept
+msgid "October"
+msgstr ""
+
+#: prayer-plan.php:2348
+#@ globalconcept
+msgid "November"
+msgstr ""
+
+#: prayer-plan.php:2348
+#@ globalconcept
+msgid "December"
+msgstr ""
+
+#: single-books.php:27
+#@ globalconcept
+msgid "More books"
+msgstr ""
+
+#: archive-friday_sermon.php:58
+#: taxonomy-archive.php:66
+#@ globalconcept
+msgid "Download Audio"
+msgstr "Аудио көчүрүү"
+

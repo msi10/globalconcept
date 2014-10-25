@@ -1,0 +1,39 @@
+<?php
+/**
+ * Template name: Books Overview
+ */
+?>
+<?php get_header(); ?>
+	<section id="two-third" class="books-content">
+    
+    <?php $media = new WP_Query('post_type=books&posts_per_page=10&paged='.$paged); ?>
+    <?php if ( $media->have_posts() ) : ?>
+		<?php while ( $media->have_posts() ) : $media->the_post(); 
+		
+		$even_odd = (++$j % 2 == 0) ? 'even' : 'odd';
+
+		?>
+		
+		<div id="book-<?php echo $post->ID; ?>" class="book-container <?php echo $even_odd; ?>">
+			<div class="book-image"><a href="<?php the_permalink(); ?>"><?php echo get_the_post_thumbnail( $post->ID, 'books-thumb'); ?></a></div>
+			<div class="book-info">
+				<div class="book-title"><a href="<?php the_permalink(); ?>" class="title"><?php the_title(); ?></a></div>
+				<div class="book-author"><?php echo get_post_meta($post->ID, 'wpcf-author', true); ?></div>
+			</div>
+		</div>
+		
+		<?php endwhile; ?>
+   		<?php wp_reset_postdata(); ?>
+	<?php else: ?>
+    	<article>
+			<h1>Nothing Found!</h1>
+			<p>Sorry, no posts matched your criteria.</p>
+		</article>
+    <?php endif; ?>
+	</section>
+    <?php get_sidebar(); ?>
+<?php get_footer(); ?>
+
+
+
+
