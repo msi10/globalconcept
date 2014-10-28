@@ -74,7 +74,7 @@
 			<figure>
 				<?php
                     global $post;
-                    $posts = get_posts("numberposts=1&post_type=post");
+                    $posts = get_posts( "orderby=rand&numberposts=1&post_type=post");
                     foreach($posts as $post) :
 					setup_postdata($post);
                 ?>
@@ -167,7 +167,7 @@
             <figure>
 				<?php
                     global $books;
-                    $books = get_posts("numberposts=2&post_type=books");
+                    $books = get_posts("orderby=rand&numberposts=2&post_type=books");
                     foreach($books as $post) :
 					setup_postdata($post);
                 ?>
@@ -201,7 +201,7 @@
 			
 			<?php
                     global $post;
-                    $posts = get_posts("numberposts=3&post_type=multimedia");
+                    $posts = get_posts("orderby=rand&numberposts=3&post_type=multimedia");
                     $tempcountr = 1;
 					foreach($posts as $post) :
 					setup_postdata($post);
