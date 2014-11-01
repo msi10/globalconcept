@@ -45,7 +45,9 @@ function changept() {
 			<div class="media-image"><a href="<?php the_permalink(); ?>"><?php //echo get_the_post_thumbnail( $post->ID, 'media-thumb'); ?><?php if( ( $video_thumbnail = get_video_thumbnail($post->ID) ) != null ) { echo "<img src='" . $video_thumbnail . "' />"; } ?></a></div>
 			<div class="media-info">
 				<div class="media-title"><a href="<?php the_permalink(); ?>" class="title"><?php the_title(); ?></a></div>
-				<div class="media-more"><?php _e('Sermon delivered by', 'globalconcept'); ?> <?php echo get_post_meta($post->ID, 'wpcf-delivered_by', true); ?> <?php _e('on', 'globalconcept'); ?> <time><?php the_time('d.m.Y'); ?></time>.</div>
+				<div class="media-more" style="line-height:1.3;">
+                                	<?php echo substr(get_post_meta($post->ID, 'wpcf-write-a-short-description', true),0,180). "..."; ?>
+                                </div>
 				<div id="metainfo-for-article" class="metainfo-for-article">			
 					<span class="category"><?php echo get_the_term_list( $post->ID, 'archive', '', ', ', '' ); ?><?php echo get_the_term_list( $post->ID, 'video-category', '', ', ', '' ); ?><?php //the_category(', '); ?></span> 
 					<time><?php the_time('d.m.Y'); ?></time> 
